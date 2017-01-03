@@ -1,0 +1,3 @@
+module VGA_Practice(vga_red);
+
+endmodule
