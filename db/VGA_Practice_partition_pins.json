@@ -60,23 +60,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "valid",
+					"name" : "type[0]",
 					"strict" : false
 				},
 				{
-					"name" : "select[2]",
+					"name" : "type[1]",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "select[1]",
-					"strict" : false
-				},
-				{
-					"name" : "select[0]",
 					"strict" : false
 				},
 				{

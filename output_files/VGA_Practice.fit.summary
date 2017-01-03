@@ -1,13 +1,13 @@
-Fitter Status : Successful - Tue Jan  3 22:54:35 2017
+Fitter Status : Successful - Wed Jan  4 01:45:56 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : VGA_Practice
 Top-level Entity Name : VGA_Practice
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 24 / 18,480 ( < 1 % )
+Logic utilization (in ALMs) : 37 / 18,480 ( < 1 % )
 Total registers : 37
-Total pins : 20 / 224 ( 9 % )
+Total pins : 18 / 224 ( 8 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
 Total RAM Blocks : 0 / 308 ( 0 % )

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Jan  3 22:54:01 2017
+Analysis & Synthesis Status : Successful - Wed Jan  4 01:45:32 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : VGA_Practice
 Top-level Entity Name : VGA_Practice
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 37
-Total pins : 20
+Total pins : 18
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_Practice
-Tue Jan  3 22:54:01 2017
+Wed Jan  4 01:45:32 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -44,14 +44,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan  3 22:54:01 2017       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jan  4 01:45:32 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; VGA_Practice                                ;
 ; Top-level Entity Name           ; VGA_Practice                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 37                                          ;
-; Total pins                      ; 20                                          ;
+; Total pins                      ; 18                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -182,36 +182,37 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 25        ;
+; Estimate of Logic utilization (ALMs needed) ; 37        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 42        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 5         ;
-;     -- 5 input functions                    ; 6         ;
-;     -- 4 input functions                    ; 3         ;
-;     -- <=3 input functions                  ; 28        ;
+; Combinational ALUT usage for logic          ; 58        ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 13        ;
+;     -- 5 input functions                    ; 10        ;
+;     -- 4 input functions                    ; 7         ;
+;     -- <=3 input functions                  ; 27        ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 37        ;
 ;                                             ;           ;
-; I/O pins                                    ; 20        ;
+; I/O pins                                    ; 18        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 37        ;
-; Total fan-out                               ; 271       ;
-; Average fan-out                             ; 2.28      ;
+; Total fan-out                               ; 357       ;
+; Average fan-out                             ; 2.73      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+--------------+--------------+
-; |VGA_Practice              ; 42 (3)              ; 37 (12)                   ; 0                 ; 0          ; 20   ; 0            ; |VGA_Practice                  ; VGA_Practice ; work         ;
-;    |synchrogazer:VGA|      ; 39 (39)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_Practice|synchrogazer:VGA ; synchrogazer ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+--------------+
+; |VGA_Practice              ; 58 (0)              ; 37 (0)                    ; 0                 ; 0          ; 18   ; 0            ; |VGA_Practice                           ; VGA_Practice ; work         ;
+;    |VGA:disp|              ; 58 (20)             ; 37 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_Practice|VGA:disp                  ; VGA          ; work         ;
+;       |synchrogazer:VGA|   ; 38 (38)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_Practice|VGA:disp|synchrogazer:VGA ; synchrogazer ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -230,14 +231,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA_Practice|synchrogazer:VGA|horizon[3]  ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA_Practice|synchrogazer:VGA|verticle[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA_Practice|VGA:disp|synchrogazer:VGA|horizon[5]  ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA_Practice|VGA:disp|synchrogazer:VGA|verticle[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -249,19 +250,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     ENA SCLR          ; 11                          ;
 ;     SCLR              ; 11                          ;
 ;     plain             ; 15                          ;
-; arriav_lcell_comb     ; 42                          ;
+; arriav_lcell_comb     ; 58                          ;
 ;     arith             ; 22                          ;
 ;         1 data inputs ; 22                          ;
-;     normal            ; 20                          ;
-;         2 data inputs ; 3                           ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 35                          ;
+;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 6                           ;
-;         6 data inputs ; 5                           ;
-; boundary_port         ; 20                          ;
+;         4 data inputs ; 7                           ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 13                          ;
+; boundary_port         ; 18                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.65                        ;
+; Average LUT depth     ; 2.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,28 +283,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Jan  3 22:53:39 2017
+    Info: Processing started: Wed Jan  4 01:45:17 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_Practice -c VGA_Practice
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 2 entities, in source file VGA_Practice.v
+Warning (10463): Verilog HDL Declaration warning at VGA_Practice.v(9): "type" is SystemVerilog-2005 keyword File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 9
+Warning (10463): Verilog HDL Declaration warning at VGA_Practice.v(18): "type" is SystemVerilog-2005 keyword File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 18
+Info (12021): Found 4 design units, including 4 entities, in source file VGA_Practice.v
     Info (12023): Found entity 1: VGA_Practice File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 1
-    Info (12023): Found entity 2: synchrogazer File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 32
+    Info (12023): Found entity 2: VGA File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 15
+    Info (12023): Found entity 3: synchrogazer File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 79
+    Info (12023): Found entity 4: picture File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 141
+Warning (10236): Verilog HDL Implicit Net warning at VGA_Practice.v(75): created implicit net for "valid" File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 75
 Info (12127): Elaborating entity "VGA_Practice" for the top level hierarchy
-Info (12128): Elaborating entity "synchrogazer" for hierarchy "synchrogazer:VGA" File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 28
-Warning (10230): Verilog HDL assignment warning at VGA_Practice.v(56): truncated value with size 32 to match size of target (11) File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 56
-Warning (10230): Verilog HDL assignment warning at VGA_Practice.v(60): truncated value with size 32 to match size of target (11) File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 60
+Info (12128): Elaborating entity "VGA" for hierarchy "VGA:disp" File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 11
+Info (12128): Elaborating entity "synchrogazer" for hierarchy "VGA:disp|synchrogazer:VGA" File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 75
+Warning (10230): Verilog HDL assignment warning at VGA_Practice.v(102): truncated value with size 32 to match size of target (11) File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 102
+Warning (10230): Verilog HDL assignment warning at VGA_Practice.v(106): truncated value with size 32 to match size of target (11) File: /home/hmkrl/verilog/VGA_Practice/VGA_Practice.v Line: 106
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 54 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 1013 megabytes
-    Info: Processing ended: Tue Jan  3 22:54:01 2017
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:42
+Info (21057): Implemented 88 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 70 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 1011 megabytes
+    Info: Processing ended: Wed Jan  4 01:45:32 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:37
 
 
